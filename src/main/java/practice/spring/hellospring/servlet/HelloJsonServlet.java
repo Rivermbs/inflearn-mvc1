@@ -1,4 +1,4 @@
-package practice.spring.hellospring.controller;
+package practice.spring.hellospring.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.util.StreamUtils;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import practice.spring.hellospring.vo.HelloVO;
 
 import java.io.IOException;

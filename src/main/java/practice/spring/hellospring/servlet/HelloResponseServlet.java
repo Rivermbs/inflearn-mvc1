@@ -1,4 +1,4 @@
-package practice.spring.hellospring.controller;
+package practice.spring.hellospring.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
