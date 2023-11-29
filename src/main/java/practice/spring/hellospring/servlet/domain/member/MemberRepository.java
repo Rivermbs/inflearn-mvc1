@@ -18,7 +18,7 @@ public class MemberRepository {
 
     }
 
-    private MemberData save(MemberData memberData) {
+    public MemberData save(MemberData memberData) {
         memberData.setId(++sequence);
         memberData.setUsername("mbpark");
         memberData.setAge(33);
@@ -27,15 +27,15 @@ public class MemberRepository {
         return memberData;
     }
 
-    private MemberData findById(long id) {
+    public MemberData findById(long id) {
         return memberStore.get(id);
     }
 
-    private List<?> findAll() {
+    public List<?> findAll() {
         return new ArrayList<>(memberStore.values());
     }
 
-    private void clearStore() {
+    public void clearStore() {
         memberStore.clear();
     }
 

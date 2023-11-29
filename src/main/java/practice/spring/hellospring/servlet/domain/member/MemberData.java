@@ -7,6 +7,11 @@ import lombok.Setter;
 @Setter
 public class MemberData {
 
+    public MemberData(String username, int age) {
+        this.username = username;
+        this.age = age;
+    }
+
     private String username;
     private int age;
     private long id;
