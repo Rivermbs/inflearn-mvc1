@@ -31,7 +31,7 @@ public class MemberRepository {
         return memberStore.get(id);
     }
 
-    public List<?> findAll() {
+    public List<MemberData> findAll() {
         return new ArrayList<>(memberStore.values());
     }
 

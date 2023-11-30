@@ -4,6 +4,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class MemberRepositoryTest {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
@@ -27,23 +29,18 @@ public class MemberRepositoryTest {
     }
 
     @Test
-    void findById() {
-        // given
-
-        // when
-
-        // then
-    }
-
-    @Test
     void findByAll() {
         // given
         MemberData member1 = new MemberData("eundong", 31);
         MemberData member2 = new MemberData("river", 35);
+        memberRepository.save(member1);
+        memberRepository.save(member2);
 
         // when
-
+        List<MemberData> memberDataList = memberRepository.findAll();
 
         // then
+        Assertions.assertThat(memberDataList.size()).isEqualTo(2);
+        Assertions.assertThat(memberDataList).contains(member1, member2);
     }
 }
