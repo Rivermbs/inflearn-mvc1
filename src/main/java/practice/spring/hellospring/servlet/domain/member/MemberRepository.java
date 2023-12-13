@@ -20,8 +20,6 @@ public class MemberRepository {
 
     public MemberData save(MemberData memberData) {
         memberData.setId(++sequence);
-        memberData.setUsername("mbpark");
-        memberData.setAge(33);
 
         memberStore.put(memberData.getId(), memberData);
         return memberData;
