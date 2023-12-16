@@ -17,6 +17,10 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
+	implementation("jakarta.servlet:jakarta.servlet-api")
+	implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api")
+	implementation("org.glassfish.web:jakarta.servlet.jsp.jstl")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
