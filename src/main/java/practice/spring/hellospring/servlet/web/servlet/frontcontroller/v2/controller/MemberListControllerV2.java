@@ -22,7 +22,7 @@ public class MemberListControllerV2 implements ControllerV2 {
         List<MemberData> memberDataList = memberRepository.findAll();
         request.setAttribute("memberDataList", memberDataList);
 
-        return new MyView("/WEB-INF/views/members.jsp", request, response);
+        return new MyView("/WEB-INF/views/members.jsp");
 
     }
 }

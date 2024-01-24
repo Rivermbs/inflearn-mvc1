@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import practice.spring.hellospring.servlet.web.servlet.frontcontroller.MyView;
 import practice.spring.hellospring.servlet.web.servlet.frontcontroller.v1.ControllerV1;
 import practice.spring.hellospring.servlet.web.servlet.frontcontroller.v1.controller.MemberFormControllerV1;
 import practice.spring.hellospring.servlet.web.servlet.frontcontroller.v1.controller.MemberListControllerV1;
@@ -31,7 +32,9 @@ public class FrontControllerServletV2 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ControllerV2 controllerV2 =  controller.get(request.getRequestURI());
-        controllerV2.process(request, response);
+        ControllerV2 controllerV2 = controller.get(request.getRequestURI());
+
+        MyView myView = controllerV2.process(request, response);
+        myView.render(request, response);
     }
 }
